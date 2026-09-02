@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Brand palette" subtitle="Deep teal carries the system; orange is the sparing accent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; }
+  .row { display: flex; gap: 1px; padding: 20px; background: var(--brand-hairline); }
+  .sw { flex: 1; background: var(--bg); padding: 16px 16px 18px; min-height: 96px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .name { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .hex { font-family: var(--font-mono); font-size: 12px; margin-top: 4px; opacity: .85; }
+  .on-dark { color: #fff; }
+  .on-light { color: var(--brand-ink); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw on-dark" style="--bg: var(--brand-teal)"><span class="name">Teal · primary</span><span class="hex">#0E4E5E</span></div>
+    <div class="sw on-dark" style="--bg: var(--brand-teal-dark)"><span class="name">Teal dark</span><span class="hex">#0A3B47</span></div>
+    <div class="sw on-dark" style="--bg: var(--brand-teal-deep)"><span class="name">Teal deep</span><span class="hex">#093039</span></div>
+    <div class="sw on-dark" style="--bg: var(--brand-orange)"><span class="name">Orange · sparing</span><span class="hex">#E1542A</span></div>
+  </div>
+</body>
+</html>

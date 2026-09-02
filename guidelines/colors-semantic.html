@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Semantic" subtitle="Status colors — success, warning, destructive — kept distinct from brand orange" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; }
+  .row { display: flex; gap: 1px; padding: 20px; background: var(--brand-hairline); }
+  .sw { flex: 1; background: var(--bg); padding: 16px 14px 18px; min-height: 96px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff; }
+  .name { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .hex { font-family: var(--font-mono); font-size: 12px; margin-top: 4px; opacity: .9; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw" style="--bg: hsl(var(--success))"><span class="name">Success</span><span class="hex">#1C7C54</span></div>
+    <div class="sw" style="--bg: hsl(var(--warning)); color: var(--brand-ink)"><span class="name">Warning</span><span class="hex">#F59E0B</span></div>
+    <div class="sw" style="--bg: hsl(var(--destructive))"><span class="name">Destructive</span><span class="hex">#D32F2F</span></div>
+    <div class="sw" style="--bg: var(--brand-orange)"><span class="name">Accent</span><span class="hex">#E1542A</span></div>
+  </div>
+</body>
+</html>

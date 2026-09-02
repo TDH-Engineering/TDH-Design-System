@@ -1,0 +1,94 @@
+/* =============================================================
+   TD&H — Color tokens
+   Brand: deep teal + orange accent + warm taupe, on white with a
+   faint blueprint grid. shadcn-style HSL channels are kept for
+   compatibility (used as `hsl(var(--token))`), alongside raw hex.
+   ============================================================= */
+
+:root {
+  /* ---- Raw brand palette (reference / direct use) ---- */
+  --brand-teal: #0E4E5E;        /* primary — deep teal */
+  --brand-teal-dark: #0A3B47;   /* hover / pressed */
+  --brand-teal-deep: #093039;   /* darkest band */
+  --brand-orange: #E1542A;      /* accent — sparing: buttons + select text */
+  --brand-orange-dark: #C7461F; /* hover / pressed */
+  --brand-taupe: #A89C87;       /* rare — print / editorial only, not UI chrome */
+  --brand-taupe-light: #C9BCA6; /* rare */
+  --brand-ink: #13333D;         /* headings */
+  --brand-navy: #1C3A5C;        /* platform chrome bar — the TDH AI Platform rail */
+  --brand-navy-dark: #16304C;   /* navy hover / pressed */
+  --brand-slate: #54636A;       /* captions, low-emphasis text */
+  --brand-paper: #FFFFFF;       /* page + cards */
+  --brand-mist: #EDF1F0;        /* soft fills / icon chips */
+  --brand-grid: rgba(20, 50, 60, 0.05);   /* full-page blueprint grid line */
+  --brand-hairline: rgba(20, 50, 60, 0.14);/* default border on white */
+
+  /* ---- shadcn semantic tokens (HSL channels) ---- */
+  --radius: 0.1875rem;          /* 3px — small, technical corner */
+
+  --background: 0 0% 100%;       /* @kind color */ /* #FFFFFF */
+  --foreground: 196 30% 15%;     /* @kind color */ /* #1A2A30 body text */
+
+  --card: 0 0% 100%; /* @kind color */
+  --card-foreground: 194 52% 16%;/* @kind color */ /* #13333D card headings */
+
+  --popover: 0 0% 100%; /* @kind color */
+  --popover-foreground: 196 30% 15%; /* @kind color */
+
+  --primary: 192 74% 21%;        /* @kind color */ /* #0E4E5E teal */
+  --primary-foreground: 0 0% 100%; /* @kind color */
+
+  --accent: 14 75% 52%;          /* @kind color */ /* #E1542A orange */
+  --accent-foreground: 0 0% 100%; /* @kind color */
+
+  --secondary: 192 74% 15%;      /* @kind color */ /* #0A3B47 deep teal */
+  --secondary-foreground: 0 0% 100%; /* @kind color */
+
+  --muted: 168 16% 94%;          /* @kind color */ /* #EDF1F0 */
+  --muted-foreground: 199 12% 37%;/* @kind color */ /* #54636A */
+
+  --destructive: 0 72% 48%;      /* @kind color */ /* #D32F2F — distinct from brand orange */
+  --destructive-foreground: 0 0% 100%; /* @kind color */
+
+  --success: 158 64% 30%;        /* @kind color */ /* #1C7C54 */
+  --success-foreground: 0 0% 100%; /* @kind color */
+  --warning: 38 92% 50%;         /* @kind color */ /* #F59E0B */
+  --warning-foreground: 194 52% 16%; /* @kind color */
+
+  --border: 200 14% 88%;         /* @kind color */ /* #DEE3E4 */
+  --input: 200 14% 88%; /* @kind color */
+  --ring: 192 74% 21%;           /* @kind color */ /* focus ring = primary teal */
+
+  /* ---- Charts / data viz — a teal ramp, not a rainbow ---- */
+  --chart-1: 192 74% 21%;        /* @kind color */ /* teal */
+  --chart-2: 192 60% 34%;        /* @kind color */ /* mid teal */
+  --chart-3: 192 40% 52%;        /* @kind color */ /* light teal */
+  --chart-4: 199 12% 37%;        /* @kind color */ /* slate */
+  --chart-5: 14 75% 52%;         /* @kind color */ /* orange — highlight series only */
+}
+
+/* Dark surface = the brand teal band (footer / stat sections).
+   Apply `.dark` to flip foreground/background onto the teal. */
+.dark {
+  --background: 192 74% 21%;     /* @kind color */ /* #0E4E5E */
+  --foreground: 180 30% 95%;     /* @kind color */ /* #F1F5F4 */
+
+  --card: 192 74% 21%; /* @kind color */
+  --card-foreground: 180 30% 95%; /* @kind color */
+
+  --primary: 14 75% 52%;         /* @kind color */ /* orange leads on dark */
+  --primary-foreground: 0 0% 100%; /* @kind color */
+
+  --secondary: 192 30% 72%;      /* @kind color */ /* light teal */
+  --secondary-foreground: 194 52% 16%; /* @kind color */
+
+  --muted: 192 50% 26%; /* @kind color */
+  --muted-foreground: 192 14% 72%; /* @kind color */
+
+  --accent: 14 75% 52%; /* @kind color */
+  --accent-foreground: 0 0% 100%; /* @kind color */
+
+  --border: 0 0% 100% / 0.16; /* @kind color */
+  --input: 0 0% 100% / 0.16; /* @kind color */
+  --ring: 14 75% 52%; /* @kind color */
+}

@@ -1,0 +1,52 @@
+<!-- @dsCard group="AI Hub" viewport="1200x780" name="AI Hub — landing" subtitle="Internal AI tools portal: hero, tool grid, stat band, news — click a tool to open the assistant" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TD&H AI Hub</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: var(--font-sans); color: var(--brand-ink); background: #fff; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  @keyframes tdhTyping { 0%, 60%, 100% { opacity: .3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-3px); } }
+  ::selection { background: rgba(225,84,42,.22); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+
+<script type="text/babel" src="Icon.jsx"></script>
+<script type="text/babel" src="SiteHeader.jsx"></script>
+<script type="text/babel" src="Landing.jsx"></script>
+<script type="text/babel" src="Assistant.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+function App() {
+  const [view, setView] = React.useState({ name: 'home', tool: null });
+  window.__navTool = (id) => setView({ name: 'tool', tool: id });
+  const goHome = () => setView({ name: 'home', tool: null });
+
+  React.useEffect(() => { window.scrollTo(0, 0); }, [view.name, view.tool]);
+
+  return (
+    <div>
+      <window.SiteHeader onHome={goHome} />
+      {view.name === 'home'
+        ? <window.Landing onOpenTool={(id) => setView({ name: 'tool', tool: id })} />
+        : <window.Assistant toolId={view.tool} onHome={goHome} />}
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

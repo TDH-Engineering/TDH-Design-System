@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Neutrals" subtitle="Ink, slate, mist and paper carry the UI. Taupe is retained for print/editorial only — not UI chrome." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; }
+  .row { display: flex; gap: 1px; padding: 20px; background: var(--brand-hairline); }
+  .sw { flex: 1; background: var(--bg); padding: 16px 14px 18px; min-height: 96px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .name { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+  .hex { font-family: var(--font-mono); font-size: 12px; margin-top: 4px; opacity: .85; }
+  .d { color: #fff; } .l { color: var(--brand-ink); }
+  .rare { opacity: .55; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw d" style="--bg: var(--brand-ink)"><span class="name">Ink</span><span class="hex">#13333D</span></div>
+    <div class="sw d" style="--bg: var(--brand-slate)"><span class="name">Slate</span><span class="hex">#54636A</span></div>
+    <div class="sw l" style="--bg: var(--brand-mist)"><span class="name">Mist</span><span class="hex">#EDF1F0</span></div>
+    <div class="sw l" style="--bg: var(--brand-paper); box-shadow: inset 0 0 0 1px var(--brand-hairline)"><span class="name">Paper</span><span class="hex">#FFFFFF</span></div>
+    <div class="sw l rare" style="--bg: var(--brand-taupe)"><span class="name">Taupe · rare</span><span class="hex">#A89C87</span></div>
+  </div>
+</body>
+</html>

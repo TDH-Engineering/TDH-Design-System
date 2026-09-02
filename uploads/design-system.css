@@ -1,0 +1,127 @@
+/* =============================================================
+   TDH AI Hub — Design System
+   Extracted from the CivAI / TDH AI Hub landing page.
+   shadcn-style tokens: HSL channels used as `hsl(var(--token))`.
+   ============================================================= */
+
+:root {
+  /* ---- Radius ---- */
+  --radius: 0.1875rem;          /* 3px — the page's small, technical corner */
+
+  /* ---- Core surfaces & text (shadcn semantic tokens) ---- */
+  --background: 0 0% 100%;       /* #FFFFFF page background (with grid overlay) */
+  --foreground: 196 30% 15%;     /* #1A2A30 body text */
+
+  --card: 0 0% 100%;             /* #FFFFFF cards */
+  --card-foreground: 194 52% 16%;/* #13333D card headings */
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 196 30% 15%;
+
+  /* ---- Brand primary: deep teal ---- */
+  --primary: 192 74% 21%;        /* #0E4E5E */
+  --primary-foreground: 0 0% 100%;   /* #FFFFFF text on teal */
+
+  /* ---- Accent: orange (news, CTAs, highlights) ---- */
+  --accent: 14 75% 52%;          /* #E1542A */
+  --accent-foreground: 0 0% 100%;
+
+  /* ---- Secondary: warm taupe ---- */
+  --secondary: 38 16% 59%;       /* #A89C87 */
+  --secondary-foreground: 194 52% 16%;
+
+  /* ---- Muted (subtle fills + low-emphasis text) ---- */
+  --muted: 168 16% 94%;          /* #EDF1F0 icon chips / soft fills */
+  --muted-foreground: 199 12% 37%;/* #54636A captions, descriptions */
+
+  /* ---- Destructive (kept distinct from brand orange) ---- */
+  --destructive: 0 72% 48%;      /* #D32F2F */
+  --destructive-foreground: 0 0% 100%;
+
+  /* ---- Lines & form fields ---- */
+  --border: 200 14% 88%;         /* #DEE3E4 — equiv. rgba(20,50,60,.14) on white */
+  --input: 200 14% 88%;
+  --ring: 192 74% 21%;           /* focus ring = primary teal */
+
+  /* ---- Charts / data viz (brand-derived) ---- */
+  --chart-1: 192 74% 21%;        /* teal */
+  --chart-2: 14 75% 52%;         /* orange */
+  --chart-3: 38 16% 59%;         /* taupe */
+  --chart-4: 194 52% 16%;        /* ink */
+  --chart-5: 199 12% 37%;        /* slate */
+
+  /* ---- Raw brand hex (reference / non-tokenized use) ---- */
+  --brand-teal: #0E4E5E;
+  --brand-teal-dark: #0A3B47;    /* hover/pressed */
+  --brand-orange: #E1542A;
+  --brand-orange-dark: #C7461F;  /* hover/pressed */
+  --brand-taupe: #A89C87;
+  --brand-taupe-light: #C9BCA6;  /* on dark teal */
+  --brand-ink: #13333D;
+  --brand-grid: rgba(20, 50, 60, 0.05); /* full-page blueprint grid line */
+
+  /* ---- Typography ---- */
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  /* eyebrow / label treatment (uppercase, letter-spaced sans) */
+  --label-letter-spacing: 0.1em;
+  --label-transform: uppercase;
+
+  /* ---- Elevation ---- */
+  --shadow-card: 0 1px 3px rgba(20, 50, 60, 0.08);
+  --shadow-float: 0 24px 60px -28px rgba(14, 78, 94, 0.45);
+}
+
+/* Dark surface = the brand teal band (footer / stat sections).
+   Apply `.dark` to flip foreground/background onto the teal. */
+.dark {
+  --background: 192 74% 21%;     /* #0E4E5E */
+  --foreground: 180 30% 95%;     /* #F1F5F4 */
+
+  --card: 192 74% 21%;
+  --card-foreground: 180 30% 95%;
+
+  --primary: 14 75% 52%;         /* orange leads on dark */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 38 22% 78%;       /* lightened taupe */
+  --secondary-foreground: 194 52% 16%;
+
+  --muted: 192 50% 26%;
+  --muted-foreground: 188 14% 70%;
+
+  --accent: 14 75% 52%;
+  --accent-foreground: 0 0% 100%;
+
+  --border: 0 0% 100% / 0.16;    /* hairlines via rgba white */
+  --input: 0 0% 100% / 0.16;
+  --ring: 14 75% 52%;
+}
+
+/* -------------------------------------------------------------
+   Example wiring (delete if you only want the tokens):
+   ------------------------------------------------------------- */
+/*
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+}
+.btn-primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: var(--radius);
+}
+.btn-accent {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: var(--label-transform);
+  letter-spacing: var(--label-letter-spacing);
+  color: hsl(var(--primary));
+}
+*/

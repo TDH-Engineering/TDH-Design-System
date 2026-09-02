@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="700x190" name="Color restraint" subtitle="Mostly white, teal carrying the system, orange in select places — and nothing else except real state" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--brand-ink); padding: 24px 30px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand-slate); }
+  .row { display: flex; align-items: stretch; gap: 3px; margin: 9px 0 18px; }
+  .bar { height: 34px; border: 1px solid var(--brand-hairline); display: flex; align-items: center; padding: 0 11px; font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+  .white { flex: 4; background: #fff; color: var(--brand-slate); }
+  .teal { flex: 3; background: var(--brand-teal); color: #fff; border-color: var(--brand-teal); }
+  .tealD { flex: 1.4; background: var(--brand-teal-dark); color: #fff; border-color: var(--brand-teal-dark); }
+  .orange { flex: .8; background: var(--brand-orange); color: #fff; border-color: var(--brand-orange); justify-content: center; padding: 0 4px; }
+  .state { display: flex; gap: 3px; }
+  .state .bar { flex: 1; color: #fff; justify-content: center; }
+</style>
+</head>
+<body>
+  <div class="lbl">The working palette · proportional</div>
+  <div class="row">
+    <div class="bar white">White ground</div>
+    <div class="bar teal">Teal — the system</div>
+    <div class="bar tealD">Teal dark</div>
+    <div class="bar orange">Orange</div>
+  </div>
+  <div class="lbl">Sanctioned extras — real state only</div>
+  <div class="row state">
+    <div class="bar" style="background:#F59E0B;border-color:#F59E0B;color:#13333D">Amber · warning</div>
+    <div class="bar" style="background:#D32F2F;border-color:#D32F2F">Red · error</div>
+    <div class="bar" style="background:#1C7C54;border-color:#1C7C54">Green · success</div>
+  </div>
+</body>
+</html>

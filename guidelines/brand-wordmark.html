@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Wordmark & division lockups" subtitle="TD&H in Archivo extrabold with the orange ampersand — division subline in spaced Space Mono. Substitute the official logo when supplied." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-sans); background: #fff; }
+  .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--brand-hairline); }
+  .cell { display: flex; align-items: center; justify-content: center; padding: 26px 16px; background: #fff; min-height: 150px; }
+  .dark { background: var(--brand-teal); }
+  .word { font-weight: 800; font-size: 34px; letter-spacing: -.02em; line-height: 1; color: var(--brand-ink); }
+  .dark .word { color: #fff; }
+  .amp { color: var(--brand-orange); }
+  .sub { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--brand-slate); margin-top: 6px; }
+  .dark .sub { color: var(--brand-taupe-light); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="cell"><div><div class="word">TD<span class="amp">&amp;</span>H</div><div class="sub">Engineering</div></div></div>
+    <div class="cell"><div><div class="word">TD<span class="amp">&amp;</span>H</div><div class="sub">Construction</div></div></div>
+    <div class="cell"><div><div class="word">TD<span class="amp">&amp;</span>H</div><div class="sub">AI&nbsp;Hub</div></div></div>
+    <div class="cell dark"><div><div class="word">TD<span class="amp">&amp;</span>H</div><div class="sub">Construction</div></div></div>
+  </div>
+</body>
+</html>

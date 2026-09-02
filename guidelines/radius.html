@@ -1,0 +1,24 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radius" subtitle="Small, technical corners — 3px is canonical, never pill-soft" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--brand-ink); padding: 24px 32px; }
+  .row { display: flex; gap: 26px; align-items: flex-end; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .box { width: 76px; height: 56px; background: var(--brand-mist); border: 1px solid var(--brand-hairline); }
+  .lab { font-family: var(--font-mono); font-size: 11px; color: var(--brand-slate); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:2px"></div><span class="lab">sm · 2px</span></div>
+    <div class="item"><div class="box" style="border-radius:3px"></div><span class="lab">md · 3px ★</span></div>
+    <div class="item"><div class="box" style="border-radius:6px"></div><span class="lab">lg · 6px</span></div>
+    <div class="item"><div class="box" style="border-radius:10px"></div><span class="lab">xl · 10px</span></div>
+    <div class="item"><div class="box" style="border-radius:999px"></div><span class="lab">pill</span></div>
+  </div>
+</body>
+</html>

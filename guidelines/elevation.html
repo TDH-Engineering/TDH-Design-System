@@ -1,0 +1,22 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Elevation" subtitle="Tight, cool shadows — cards barely lift; floats stay restrained" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #F7F9F9; color: var(--brand-ink); padding: 30px 32px; }
+  .row { display: flex; gap: 28px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .box { width: 130px; height: 64px; background: #fff; border: 1px solid var(--brand-hairline); border-radius: 6px; }
+  .lab { font-family: var(--font-mono); font-size: 11px; color: var(--brand-slate); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-card)"></div><span class="lab">card</span></div>
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-raised)"></div><span class="lab">raised</span></div>
+    <div class="item"><div class="box" style="box-shadow: var(--shadow-float)"></div><span class="lab">float</span></div>
+  </div>
+</body>
+</html>

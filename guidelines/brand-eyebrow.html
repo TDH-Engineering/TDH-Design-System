@@ -1,0 +1,22 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Eyebrow label" subtitle="Uppercase Space Mono eyebrows mark every section — the tick and number inherit the label's color" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--brand-ink); padding: 26px 32px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--brand-teal); }
+  .tick { width: 22px; height: 2px; background: currentColor; }
+  .num { opacity: .5; }
+  h3 { margin: 11px 0 0; font-size: 25px; font-weight: 800; letter-spacing: -.015em; max-width: 520px; line-height: 1.1; }
+  .alt { margin-top: 20px; }
+  .muted { color: var(--brand-slate); }
+</style>
+</head>
+<body>
+  <div><div class="eyebrow"><span class="tick"></span>Who we are</div><h3>A full-service consulting engineering firm</h3></div>
+  <div class="alt"><div class="eyebrow"><span class="num">01.</span>Dashboard</div></div>
+  <div class="alt"><div class="eyebrow muted"><span class="tick"></span>Supporting detail</div></div>
+</body>
+</html>

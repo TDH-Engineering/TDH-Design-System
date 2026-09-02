@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Dark teal surface" subtitle="The .dark surface — the one large field of color; white text, hairline rules, orange only on the primary action" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; font-family: var(--font-sans); }
+  .band { background: var(--brand-teal); padding: 28px 32px; color: #F1F5F4; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #e6eeee; }
+  .tick { width: 20px; height: 2px; background: currentColor; }
+  h3 { font-size: 22px; margin: 9px 0 16px; font-weight: 700; letter-spacing: -.01em; }
+  .chips { display: flex; gap: 10px; align-items: center; }
+  .chip { font-family: var(--font-mono); font-size: 12px; padding: 7px 12px; border-radius: 3px; }
+  .orange { background: var(--brand-orange); color: #fff; }
+  .ghost { border: 1px solid rgba(255,255,255,.28); color: #F1F5F4; }
+</style>
+</head>
+<body>
+  <div class="band">
+    <div class="eyebrow"><span class="tick"></span>Dark surface · .dark</div>
+    <h3>Stat bands, footers and callout panels</h3>
+    <div class="chips">
+      <span class="chip orange">Primary action</span>
+      <span class="chip ghost">Secondary</span>
+    </div>
+  </div>
+</body>
+</html>

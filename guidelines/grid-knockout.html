@@ -1,0 +1,37 @@
+<!-- @dsCard group="Spacing" viewport="700x370" name="Grid knockout" subtitle="Opaque content column occludes the page grid — grid visible in the margins only, one 96px cell of clearance per side" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: var(--font-sans); color: var(--brand-ink); }
+  .ground { background-image: linear-gradient(var(--brand-grid) 1px, transparent 1px), linear-gradient(90deg, var(--brand-grid) 1px, transparent 1px); background-size: var(--grid-cell) var(--grid-cell); padding: 22px 0; }
+  .col { background: var(--brand-paper); padding: 20px var(--space-12); max-width: 500px; margin: 0 auto; }
+  .bad .col { background: none; border-left: var(--space-12) solid transparent; border-right: var(--space-12) solid transparent; padding: 20px 0; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  .ok { color: var(--brand-teal); }
+  .no { color: #C0271F; }
+  h3 { font-size: 17px; font-weight: 800; letter-spacing: -.015em; margin: 6px 0 5px; }
+  p { margin: 0; font-size: 13px; line-height: 1.55; color: #2c454d; }
+</style>
+</head>
+<body>
+  <div class="ground">
+    <div class="col">
+      <div class="lbl ok">Correct · opaque background</div>
+      <h3>The column occludes the grid</h3>
+      <p>Grid lines stop cleanly at the column edge and stay visible in the outer margins. One 96px cell of clearance each side.</p>
+    </div>
+  </div>
+  <div class="ground bad">
+    <div class="col">
+      <div class="lbl no">Incorrect · transparent border</div>
+      <h3>Space reserved, nothing occluded</h3>
+      <p>The border reserves the same width but the grid runs straight through the text behind it.</p>
+    </div>
+  </div>
+</body>
+</html>

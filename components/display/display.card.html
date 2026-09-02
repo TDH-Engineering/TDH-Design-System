@@ -1,0 +1,73 @@
+<!-- @dsCard group="Components" viewport="700x280" name="Display — Card, Badge, Eyebrow, Stat, IconChip" subtitle="Flat cards with semantic left accent rules, the dark teal panel, status tags and stat-band metrics" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: var(--font-sans); background: #fff; color: var(--brand-ink); padding: 20px 22px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: start; }
+  .tdh-card__body { padding: 16px !important; }
+  .ttl { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
+  .ttl strong { font-size: 14px; letter-spacing: -.01em; }
+  p { margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--brand-slate); }
+  .band { background: var(--brand-teal); padding: 16px 20px; display: flex; gap: 26px; margin-top: 12px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { Card, Badge, Eyebrow, Stat, IconChip, Button } = window[Object.keys(window).find(k => /^(TDH)?DesignSystem_/.test(k))];
+function LI({ name, size = 16 }) {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    if (ref.current && window.lucide) {
+      ref.current.innerHTML = '<i data-lucide="' + name + '"></i>';
+      window.lucide.createIcons({ attrs: { width: size, height: size, 'stroke-width': 2 }, nameAttr: 'data-lucide' });
+    }
+  }, [name, size]);
+  return <span ref={ref} style={{ display: 'inline-flex', lineHeight: 0 }} />;
+}
+function Demo() {
+  return (
+    <div>
+      <div className="grid3">
+        <Card accent="left" interactive meta="In the hub"
+          footer={<Button variant="primary" size="sm" iconRight={<LI name="arrow-right" size={14} />}>Open</Button>}>
+          <div className="ttl"><IconChip><LI name="flask-conical" /></IconChip><strong>Concrete Test Log</strong></div>
+          <p>Slump, air and cylinder sets.</p>
+        </Card>
+        <Card accent="left" interactive meta="In the hub"
+          footer={<Button variant="outline" size="sm" iconRight={<LI name="arrow-right" size={14} />}>Open</Button>}>
+          <div className="ttl"><IconChip><LI name="folder-open" /></IconChip><strong>Report Compiler</strong></div>
+          <p>Reports in the owner's format.</p>
+        </Card>
+        <Card dark>
+          <Eyebrow tone="onDark" tick={false}>The field app</Eyebrow>
+          <strong style={{ display: 'block', fontSize: 14, margin: '7px 0 5px', color: '#fff' }}>Install once</strong>
+          <p style={{ color: '#c2d4d6' }}>Holds locally, syncs in range.</p>
+          <div className="badges" style={{ marginTop: 10 }}>
+            <Badge variant="success" dot>Online</Badge>
+            <Badge variant="outline" style={{ color: '#c2d4d6', borderColor: 'rgba(255,255,255,.28)' }}>Beta</Badge>
+          </div>
+        </Card>
+      </div>
+      <div className="band">
+        <Stat value="10" suffix="tools" label="In production" size="sm" onDark />
+        <Stat value="5" suffix="field" label="On the phone" size="sm" onDark />
+        <Stat value="5" suffix="desk" label="In the hub" size="sm" onDark />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

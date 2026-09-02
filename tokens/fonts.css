@@ -1,0 +1,9 @@
+/* =============================================================
+   TD&H — Webfonts
+   Archivo (sans / display) + Space Mono (technical mono).
+   Both are Google Fonts; loaded via the CSS import below.
+   If you self-host, drop the .ttf/.woff2 files in assets/fonts
+   and replace this import with @font-face rules.
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
